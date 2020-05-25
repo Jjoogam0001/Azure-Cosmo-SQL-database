@@ -1,0 +1,50 @@
+﻿@model Martin_Jjooga_Lab3New.Models.Route
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Route</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.flightNber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.flightNber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.carrier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.carrier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.departure_airport)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.departure_airport)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.arrival_airport)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.arrival_airport)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

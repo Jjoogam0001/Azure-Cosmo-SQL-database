@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Martin_Jjooga_Lab3New.Models.Route>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.flightNber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.carrier)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.departure_airport)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.arrival_airport)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.flightNber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.carrier)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.departure_airport)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.arrival_airport)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
